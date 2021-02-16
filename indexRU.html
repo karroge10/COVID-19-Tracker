@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>Covid-19 Tracker</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="main-header">
+            <a class="main-header-link" onClick="location.href='indexRU.html'">COVID-19 Live Tracker</a>
+        </div>
+        <div class="search-box">
+            <div class="dropdown">
+                <button class="dropbtn dropbtn1" onclick="myFunctionPC()">Язык
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown-pc">
+                    <a  class="language"href="/indexRU.html">RU</a>
+                    <a  class="language"href="/index.html">EN</a>
+                </div>
+            </div> 
+            <label for="country-search-pc"></label>
+            <input name="country-search-pc" id="country-search-pc" class="search" placeholder="Страна">
+            <button type="button" onClick="getCountryName();" class="country-search-button" id="searchBtn-pc">Поиск</button>
+        </div>
+    </nav>
+    <nav class="navbar-mobile hidden">
+        <ul class="dropdown-mobile" id="nav-list">
+            <div class="search-box">
+                <div class="dropdown">
+                    <button class="dropbtn dropbtn2" onclick="myFunctionMobile()">Язык
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="myDropdown-mobile">
+                        <a  class="language"href="/indexRU.html">RU</a>
+                        <a  class="language"href="/index.html">EN</a>
+                    </div>
+                </div>
+                <div class="search-container">
+                    <label for="country-search-mobile"></label>
+                    <input name="country-search-mobile" id="country-search-mobile" class="search" placeholder="Cтрана">
+                    <button type="button" onClick="getCountryName();" class="country-search-button" id="searchBtn-mobile">Поиск</button>
+                </div> 
+            </div>
+        </ul>
+        <div class="main-header">
+            <a class="main-header-link" onClick="location.href='indexRU.html'">COVID-19 Live Tracker</a>
+        </div>
+        <div class="navbar__ham" onclick="hamburgerOpen()" id="nav-icon3">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <div class="country-info-wrap">
+            <div class="totals">
+                <h1 id="country-name" class="country-name">Мир</h1>
+                <h2 class="totals-text">Всего заразилось: </h2>
+                <p id="cases" class="numbers"></p>
+                <h2 class="totals-text">Всего выздоравело: </h2>
+                <p id="recovered" class="numbers"></p>
+                <h2 class="totals-text">Всего умерло: </h2>
+                <p id="deaths" class="numbers"></p>
+                <h2 class="totals-text">Сейчас заражено: </h2>
+                <p id="active" class="numbers"></p>
+                <h2 class="totals-text">В критическом состоянии: </h2>
+                <p id="critical" class="numbers"></p>
+            </div>
+            <div class="new">
+                <h1 class="date">Сегодня</р1>
+                <h2 class="totals-text">Новые заражения:</h2>
+                <p id="new-cases" class="numbers"></p>
+                <h2 class="totals-text">Новые смерти:</h2>
+                <p id="new-deaths" class="numbers"></p>
+                <h2 class="piechartheader">График летальности</h2>
+                <p id='no-info' class="numbers"></p>
+                <div id="donutchart"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/mainRU.js"></script>
+</body>
+</html>

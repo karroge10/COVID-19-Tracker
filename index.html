@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>Covid-19 Tracker</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="main-header">
+            <a class="main-header-link" onClick="location.href='index.html'">COVID-19 Live Tracker</a>
+        </div>
+        <div class="search-box">
+            <div class="dropdown">
+                <button class="dropbtn dropbtn1" onclick="myFunctionPC()">Language
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown-pc">
+                    <a class="language" href="/index.html" style="padding: 10px 0px; width: 125px;">EN</a>
+                    <a class="language" href="/indexRU.html" style="padding: 10px 0px; width: 125px;">RU</a>
+                </div>
+            </div> 
+            <label for="country-search-pc"></label>
+            <input name="country-search-pc" id="country-search-pc" class="search" placeholder="Enter country" required>
+            <button type="button" onClick="getCountryName();" class="country-search-button" id="searchBtn-pc">Search</button>
+        </div>
+    </nav>
+    <nav class="navbar-mobile hidden">
+        <ul class="dropdown-mobile" id="nav-list">
+            <div class="search-box">
+                <div class="dropdown">
+                    <button class="dropbtn dropbtn2" onclick="myFunctionMobile()">Language
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="myDropdown-mobile">
+                        <a class="language" href="/index.html" style="padding: 5px 0px; width: 125px;">EN</a>
+                        <a class="language" href="/indexRU.html" style="padding: 5px 0px; width: 125px;">RU</a>
+                    </div>
+                </div> 
+                <div class="search-container">
+                    <label for="country-search-mobile"></label>
+                    <input name="country-search-mobile" id="country-search-mobile" class="search" placeholder="Enter country" required>
+                    <button type="button" onClick="getCountryName();" class="country-search-button" id="searchBtn-mobile">Search</button>
+                </div> 
+            </div>
+        </ul>
+        <div class="main-header">
+            <a class="main-header-link" onClick="location.href='index.html'">COVID-19 Live Tracker</a>
+        </div>
+        <div class="navbar__ham" onclick="hamburgerOpen()" id="nav-icon3">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <div class="country-info-wrap">
+            <div class="totals">
+                <h1 id="country-name" class="country-name">World</h1>
+                <h2 class="totals-text">Total Cases: </h2>
+                <p id="cases" class="numbers"></p>
+                <h2 class="totals-text">Recovered: </h2>
+                <p id="recovered" class="numbers"></p>
+                <h2 class="totals-text">Total Deaths: </h2>
+                <p id="deaths" class="numbers"></p>
+                <h2 class="totals-text">Active Cases: </h2>
+                <p id="active" class="numbers"></p>
+                <h2 class="totals-text">Critical Condition: </h2>
+                <p id="critical" class="numbers"></p>
+            </div>
+            <div class="new">
+                <h1 class="date">Today</р1>
+                <h2 class="totals-text">New Cases:</h2>
+                <p id="new-cases" class="numbers"></p>
+                <h2 class="totals-text">New Deaths:</h2>
+                <p id="new-deaths" class="numbers"></p>
+                <h2 class="piechartheader">COVID-19 Mortality</h2>
+                <p id='no-info' class="numbers"></p>
+                <div id="donutchart"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-made-by">
+          <div class="made-by">
+            <span>© 2020</span>
+            <a href="https://egorkabantsov.netlify.app" rel="noreferrer nofollow" target="_blank" class="made-by-link"><span>Created by </span>Егор Кабанцов</a>
+          </div>
+        </div>
+      </footer>
+    <script src="/main.js"></script>
+</body>
+</html>
