@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: covid-19-stats.netlify.app
+Token: dc545c6bc62c554af8dc2963d2ff1c2e2d883598fd6965a794367580ea5af700
