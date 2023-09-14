@@ -75,6 +75,12 @@ body {
 	max-width: 127px;
 }
 
+.warning-message {
+	color: red;
+	font-size: 26px;
+	margin-top: 300px
+}
+
 .language:hover,
 .dropdown:hover .dropbtn,
 .dropbtn:focus {
